@@ -1,0 +1,61 @@
+{
+  "version": "0.1.0",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test --passWithNoTests",
+    "lint": "tsdx lint",
+    "dev": "tsdx build --watch",
+    "format": "prettier --write src/**/*.{ts,tsx,css} --config ./.prettierrc"
+  },
+  "peerDependencies": {},
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "name": "@crosswind/classes",
+  "contributors": [
+    "Lucas Souza (https://github.com/lucasdesouza-dev)"
+  ],
+  "module": "dist/classes.esm.js",
+  "size-limit": [
+    {
+      "path": "dist/classes.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "dist/classes.esm.js",
+      "limit": "10 KB"
+    }
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.22.6",
+    "@babel/preset-env": "^7.22.6",
+    "@babel/preset-react": "^7.22.5",
+    "@babel/preset-typescript": "^7.22.5",
+    "@size-limit/preset-small-lib": "^8.2.6",
+    "@types/react": "^18.2.14",
+    "@types/react-dom": "^18.2.6",
+    "autoprefixer": "^10.4.15",
+    "babel-loader": "^9.1.2",
+    "postcss": "^8.4.28",
+    "prettier": "^3.0.0",
+    "prop-types": "15.8.1",
+    "size-limit": "^8.2.6",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.6.0",
+    "typescript": "^5.1.6"
+  },
+  "dependencies": {}
+}
